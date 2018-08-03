@@ -4,6 +4,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 // variable app to create express application
 var app = express();
 
@@ -75,6 +76,6 @@ res.send({
 });
 
 // the 'app.listen': its like binding the app to run from the terminal
-app.listen(3000, () => {
-  console.log('Server is up and running on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up and running on port ${port}`);
 });
